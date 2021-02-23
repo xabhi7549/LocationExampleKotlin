@@ -131,14 +131,14 @@ class LocationTrack(private val mContext: Context) : Service(), LocationListener
 
     fun getLongitude(): Double {
         if (loc != null) {
-           longitude = loc!!.longitude
+            longitude = loc!!.longitude
         }
         return longitude
     }
 
     fun getLatitude(): Double {
         if (loc != null) {
-             latitude = loc!!.latitude
+            latitude = loc!!.latitude
         }
         return latitude
     }
