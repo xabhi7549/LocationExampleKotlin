@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
             updateLocation()
         }
 
-
         //Get Location for first create
         updateLocation()
     }

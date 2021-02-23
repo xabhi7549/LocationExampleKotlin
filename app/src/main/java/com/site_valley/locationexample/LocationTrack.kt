@@ -30,7 +30,7 @@ class LocationTrack(private val mContext: Context) : Service(), LocationListener
      * @return Location
      */
     private val location: Location?
-        private get() {
+        get() {
             try {
                 locationManager = mContext
                     .getSystemService(LOCATION_SERVICE) as LocationManager
@@ -170,7 +170,7 @@ class LocationTrack(private val mContext: Context) : Service(), LocationListener
     }
 
     /**
-     * Request the missing permissions
+     * Stop Listener if not needed
      */
     fun stopListener() {
         if (locationManager != null) {
@@ -198,6 +198,7 @@ class LocationTrack(private val mContext: Context) : Service(), LocationListener
         return null
     }
 
+    //Runs when location is changed
     override fun onLocationChanged(location: Location) {
         loc!!.latitude = location.latitude
         loc!!.longitude = location.longitude
